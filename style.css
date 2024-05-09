@@ -1,0 +1,75 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background-color: rgb(4, 7, 46);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.title h1 {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2.9em;
+    text-transform: uppercase;
+    color: aliceblue;
+}
+
+.container {
+    background-color: rgb(1, 3, 29);
+    width: 90%;
+    max-width: 1000px;
+    margin: 1.6em auto;
+
+    display: grid;
+    gap: 1.6em;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "main main main aside aside"
+    "main main main aside aside";
+    
+}
+
+.container > .header,
+.container > .sidebar,
+.container > .content,
+.container > .footer,
+.container > div {
+    background: rgb(77, 1, 1);
+    padding: 20px;
+    border: 1px solid white;
+}
+
+.container > .header,
+.container > .footer {
+    grid-column: 1/6;   
+    background: rgb(1, 3, 29);
+    color: aliceblue;
+}
+
+.container > .content {
+    grid-column: span;
+}
+
+.container > .article {
+    background: rgb(1, 3, 29);
+    padding: 20px;
+    margin-top: 5px;
+    color: rgb(179, 255, 255);
+    width: 5fr;
+}
+
+.container > .sidebar {
+    grid-column: span 2;
+    background: black;
+    color: antiquewhite;
+}
+
+
+
+img {
+    width: 100%;
+    height: 200%;
+}
